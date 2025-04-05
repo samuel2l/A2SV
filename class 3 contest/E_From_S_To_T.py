@@ -34,20 +34,42 @@
              
 
 
-a="acb"
-b="acxb"
-i=0
-j=0
-uncommon=[]
-while i<len(a):
-    if a[i]==b[j]:
-        continue
-    else:
-        while a[i]!=b[j] and j<len(b):
-            uncommon.append(b[j])
-            j+=1
+from collections import Counter
 
-print("ei")
-print(uncommon)            
 
-   
+s="ab"
+t="acxb"
+p="cax"
+isSolved=False
+s_arr=[False for _ in range(len(s))]
+t_arr=[]
+p_arr=[]
+
+if s==t:
+    print("YES")
+    isSolved=True
+# if len(s)>len(t):
+#     isSolved=False
+#     print("NO")
+s_arr=[False for _ in range(len(s))]
+t_arr=[False for _ in range(len(t))]
+p_arr=[]
+t_count=Counter(t)
+print("counter",t_count)
+if s==t:
+    print("YES")
+    isSolved=True
+# if len(s)>len(t):
+#     isSolved=False
+#     print("NO")
+for idx in range(len(s)):
+    temp=t
+    if len(s)<len(t):
+        if s[idx] in temp:
+            if t_count[s[idx]]>0:
+                t_count[s[idx]]-=1
+                s_arr[idx]=True
+print(s_arr)
+
+not_in_s=[t[i] for i in range(len(s)) if s_arr[i]!=True]
+print(not_in_s)
