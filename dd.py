@@ -1,34 +1,20 @@
-# s= int(input())
-# t= list(map(int,input().split()))
+# nums=[-2,-3,-3,-5,5,3,3,2,3,4,2,5,1]
 
-# t.sort()
-# ans=0
-# print(t)
-# # print(len(t))2
-# for i in range(len(t)-1,-1,-1):
-#     print(t[i]**0.5)
-#     print(int(t[i]**0.5)==t[i]**0.5)
-    
+# mini=min(nums)
 
- 
-#     if  int(t[i]**0.5)!=t[i]**0.5:
-#         ans=t[i]
-#         break
-# print(ans)
+# rn=(max(nums)+1)-mini
+# count=[0]*(rn)
 
+# for num in nums:
+#     count[num-mini]+=1
+# print(count)
+# target=0
 
+# for idx,val in enumerate(count):
+#     for i in range(val):
+#         nums[target]=idx+mini
+#         target+=1
+# print(nums)
 
-# print([0,0,0,0,0,0,0]==[0,0,0,0,0,0,0])
-
-# for w in range(1,101):
-#     if w%2==0:
-#         print(w,"YES")
-#     else:
-#         print(w,"NO"
-
-
-k=[1,1,1,1,1]
-while k:
-    print(len(k))
-    k.pop(k[-1])
-
+k=["heythere"]
+print(list(k[0]))

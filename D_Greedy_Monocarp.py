@@ -14,7 +14,6 @@ for _ in range(t):
     i=0
 
     while i<len(a) and coins<=k:
-
         if coins+a[i]<=k:
             coins+=a[i]
         else:
