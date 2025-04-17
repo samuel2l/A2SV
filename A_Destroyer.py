@@ -24,7 +24,6 @@ for _ in range(t):
         #this way you do not have to loop through entire array and be doing i!=j as you know only ones ahead are greater than current
         vals=sorted(count.keys())
 
-
         for i in range(len(vals)):
             for j in range(i+1,len(vals)):
                 #check count of current value < any other element greater than it
